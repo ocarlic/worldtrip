@@ -5,7 +5,7 @@ import { RiArrowLeftSLine } from 'react-icons/ri'
 export function Header() {
   return (
     <Flex
-      h='100'
+      h={[50, 100]}
       w='100%'
       as='header'
       pr={[5, 10, 120]}
