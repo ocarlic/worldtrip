@@ -46,7 +46,6 @@ export function Banner() {
         </Text>
 
         <Text
-          w='90%'
           top={[24, 48, 60]}
           position='absolute'
           color='gray.200'
