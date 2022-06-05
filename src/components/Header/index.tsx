@@ -1,8 +1,13 @@
 import { Logo } from '../Logo'
 import { Flex, Icon } from '@chakra-ui/react'
 import { RiArrowLeftSLine } from 'react-icons/ri'
+import { useRouter } from 'next/router'
 
 export function Header() {
+  const router = useRouter()
+
+  console.log('router: ', router)
+
   return (
     <Flex
       h={[50, 100]}
@@ -12,7 +17,14 @@ export function Header() {
       pl={[5, 10, 120]}
       alignItems='center'
     >
-      <Icon as={RiArrowLeftSLine} fontSize='32' />
+      {router.pathname !== '/' && (
+        <Icon
+          onClick={() => router.back()}
+          as={RiArrowLeftSLine}
+          fontSize='32'
+          cursor='pointer'
+        />
+      )}
 
       <Logo />
     </Flex>

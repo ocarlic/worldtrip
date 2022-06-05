@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../styles/theme'
+import { Header } from '../components/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Worldtrip</title>
       </Head>
-      
+
+      <Header />
+
       <Component {...pageProps} />
     </ChakraProvider>
   )
